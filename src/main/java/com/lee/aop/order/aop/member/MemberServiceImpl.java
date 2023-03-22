@@ -3,9 +3,11 @@ package com.lee.aop.order.aop.member;
 import com.lee.aop.order.aop.member.annotation.ClassAop;
 import com.lee.aop.order.aop.member.annotation.MethodAop;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 @ClassAop
-@Component
+// @Component
+@Service
 public class MemberServiceImpl implements MemberService {
 
     @Override

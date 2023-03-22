@@ -63,8 +63,8 @@ public class ArgsTest {
         Assertions.assertThat(pointcut("execution(* *(String))")
                 .matches(helloMethod, MemberServiceImpl.class)).isTrue();
         Assertions.assertThat(pointcut("execution(* *(java.io.Serializable))")  // 매칭 실패
-                .matches(helloMethod, MemberServiceImpl.class)).isTrue();
+                .matches(helloMethod, MemberServiceImpl.class)).isFalse();
         Assertions.assertThat(pointcut("execution(* *(Object))")                // 매칭 실패
-                .matches(helloMethod, MemberServiceImpl.class)).isTrue();
+                .matches(helloMethod, MemberServiceImpl.class)).isFalse();
     }
 }
