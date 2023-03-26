@@ -25,6 +25,7 @@ public class RetryAspect {
                 exceptionHolder = e;
             }
         }
+
         throw exceptionHolder;
 
     }
